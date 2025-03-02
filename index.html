@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For him</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        #headerText, #firstSentence, #content, #secReason, #thirdR,
+        #fourthR, #fifthR, #sixthR, #seventhR, #eighthR, #ninethR, #tenthR{
+            font-family: 'Comic Neue', cursive;
+        }
+        #onClick{
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+        }
+
+        #nextButton {
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #thirdAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #fourthAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #fifthAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #sixthAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #seventhAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #eighthAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #ninethAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #tenthAction{
+            display: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #headerText{
+            text-align: center;
+            font-size: 100px;
+        }
+        #firstSentence{
+            text-align: center;
+            font-size: 50px;
+        }
+        #loveGif{
+            display: none;
+            width: 300px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #content{
+            display: none;
+            font-size: 35px;
+            text-align: center;
+        }
+        #secReason{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #funnyGif{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+
+        #thirdR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #values{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #fourthR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #empathy{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #fifthR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #mental{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #sixthR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #cute{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #seventhR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #strong{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        
+        #eighthR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #amazing{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #ninthR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+        #sunshine{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+        #tenthR{
+            display: none;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #iLoveYou{
+            display: none;
+            width: 550px;
+            margin-top: 20px;
+            margin: auto;
+        }
+    
+    </style>
+</head>
+<body style="background-color: lightblue">
+    <h1 id="headerText"> Happy 6 months cutie </h1>
+
+    <p id="firstSentence"> Reasons I love you! </p>
+
+    <button id="onClick" onclick= "toggleText()">Click Me</button>
+
+    <p id="content"> 1. You are loving.</p>
+
+    <img id="loveGif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmdib3V0Zmd0NnpmdTJyMjE5NmhjYTA1bm85ODJycGR1cXduMWE1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c76IJLufpNwSULPk77/giphy.gif" alt="Loving GIF">
+    
+    <!-- Button that will appear after the GIF -->
+    <button id="nextButton" onclick="nextAction()"> Click Me Next!</button>
+
+    <p id="secReason"> 2. Your silly personality :P </p>
+
+    <img id="funnyGif" src ="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWh3eGRubmFtd2Q0ZGR0ZzE5c2gxdnVnMWVvNGRsNGlyMGdhejB3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DZNbiysraZY0C7o2Wq/giphy.gif" alt ="Funny GIF">
+
+    <button id="thirdAction" onclick="thirdAction()"> Click Me Next!</button>
+    
+    <p id="thirdR"> 3. Your values (what u care about, like, standards, etc)</p>
+    <img id = "values" src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmdyYTB4ZXZxaGF0YWV5ODVldjZnNWVsMmdkZXl6YjJrbXF5dTRiMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U8MdiW0xzFjKnjK9hZ/giphy.gif" alt = "Values">
+
+    <button id="fourthAction" onclick="fourthAction()"> Click Me Next!</button>
+
+    <p id="fourthR"> 4. Your ability to understand, empathize, care, and be there when I need you. </p>
+    <img id = "empathy" src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG83eG5yaHJnOWExZWdxZGVham05Z2dvYXJmbHR0dW05b2NnNjVzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1BhGzgpZXYWwWMAGB1/giphy.gif" alt = "Empathy">
+    
+    <button id="fifthAction" onclick="fifthAction()"> Click Me Next!</button>
+
+    <p id="fifthR" > 5. Your resilience to be better and grow in your mind and body </p>
+    <img id = "mental" src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2U2MW12cWQ0bHNpbjhqazcxbHR0dTA5cms5b3h4eWVwNHhlc2VjOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mOuBZlIUngSknHOhQy/giphy.gif" alt = "Mental">
+
+    <button id="sixthAction" onclick="sixthAction()"> Click Me Next!</button>
+
+    <p id="sixthR" > 6. You are thoughtful and considerate of others </p>
+    <img id = "cute" src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGY2am1rN2Q5cGx3angxdjFpNmg0OGw2c201bjIwMXR2dTZkdjV1aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohhwnx9iiNmKrrua4/giphy.gif" alt = "Cute">
+
+    <button id="seventhAction" onclick="seventhAction()"> Click Me Next!</button>
+
+    <p id="seventhR" > 7. You are strong and passionate </p>
+    <img id = "strong" src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjRuZzZqZzR5M3o3bGptd2Z1eTMxZmRhb254Y2IzaW9lOW9jODBseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUPGGecxiqAvxUqd20/giphy.gif" alt = "Strong GIF">
+
+    <button id="eighthAction" onclick="eighthAction()"> Click Me Next!</button>
+
+    <p id ="eighthR"> 8.  You are amazing in everything you do </p>
+    <img id = "amazing" src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3hxNDl0Zm1kd2xvemtzbXh1NmFrb2R0bnJtc3lxOHcxNWd0NWVwOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VaQ5kBkdhhd9S/giphy.gif" alt = "Amazing">
+
+    <button id="ninethAction" onclick="ninethAction()"> Click Me Next!</button>
+
+    <p id ="ninthR" > 9. Your ability to make my day in everything you do </p>
+    <img id = "sunshine" src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWx6Nmx6NXB6aGVhYnN2OHAxcDk1bmxscm5tYWV4ZHpkejFkcHZxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SledIutEbjYXiZsgCT/giphy.gif" alt = "SunShine">
+
+    <button id="tenthAction" onclick="tenthAction()"> Click Me!</button>
+
+    <p id="tenthR" > 10. You're beautiful inside and out! </p>
+    <img id = "iLoveYou" src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd200Z3ZtaHR4d3VscjJ6bDh4czRsNnlvYzYyczRhcW1kbmpnbGYweCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RB46T9ysjzDEs/giphy.gif" alt = "Love You GIF">
+
+
+    <script>
+      function toggleText() {
+        let content = document.getElementById("content");
+        let gif = document.getElementById("loveGif");
+        let netButton = document.getElementById("nextButton");
+
+        content.style.display = "block";
+        gif.style.display = "block";
+
+            setTimeout(() => {
+                nextButton.style.display = "block";
+            }, 500); 
+        }
+    
+        function nextAction(){
+            let secReason = document.getElementById("secReason");
+            let funnyGif = document.getElementById("funnyGif");
+            let thirdAction = document.getElementById("thirdAction");
+
+            // Toggle visibility of secReason and funnyGif
+            secReason.style.display = "block";
+            funnyGif.style.display = "block";
+
+            setTimeout(() => {
+                thirdAction.style.display = "block";
+            }, 500)
+            
+        }
+        function thirdAction() {
+            let thirdR = document.getElementById("thirdR");
+            let fourthAction = document.getElementById("fourthAction");
+            let values = document.getElementById("values");
+
+            thirdR.style.display = "block";
+            values.style.display = "block";
+
+            setTimeout(() => {
+                fourthAction.style.display = "block";
+            }, 500);
+        }
+
+        function fourthAction() {
+            let fourthR = document.getElementById("fourthR");
+            let fifthAction = document.getElementById("fifthAction");
+            let empathy = document.getElementById("empathy");
+
+            fourthR.style.display = "block";
+            empathy.style.display = "block";
+
+            setTimeout(() => {
+                fifthAction.style.display = "block";
+            }, 500);
+        }
+
+        function fifthAction() {
+            let fifthR = document.getElementById("fifthR");
+            let sixthAction = document.getElementById("sixthAction");
+            let mental = document.getElementById("mental");
+
+            fifthR.style.display = "block";
+            mental.style.display = "block";
+
+            setTimeout(() => {
+                sixthAction.style.display = "block";
+            }, 500);
+        }
+
+        function sixthAction() {
+            let sixthR = document.getElementById("sixthR");
+            let seventhAction = document.getElementById("seventhAction");
+            let cute = document.getElementById("cute");
+
+            sixthR.style.display = "block";
+            cute.style.display = "block";
+
+            setTimeout(() => {
+                seventhAction.style.display = "block";
+            }, 500);
+        }
+
+        function seventhAction() {
+            let seventhR = document.getElementById("seventhR");
+            let eighthAction = document.getElementById("eighthAction");
+            let strong = document.getElementById("strong");
+
+            seventhR.style.display = "block";
+            strong.style.display = "block";
+
+            setTimeout(() => {
+                eighthAction.style.display = "block";
+            }, 500);
+        }
+
+        function eighthAction() {
+            let eighthR = document.getElementById("eighthR");
+            let ninethAction = document.getElementById("ninethAction");
+            let amazing = document.getElementById("amazing");
+
+            eighthR.style.display = "block";
+            amazing.style.display = "block";
+
+            setTimeout(() => {
+                ninethAction.style.display = "block";
+            }, 500);
+        }
+
+        function ninethAction() {
+            let ninthR = document.getElementById("ninthR");
+            let tenthAction = document.getElementById("tenthAction");
+            let sunshine = document.getElementById("sunshine");
+
+            ninthR.style.display = "block";
+            sunshine.style.display = "block";
+
+            setTimeout(() => {
+                tenthAction.style.display = "block";
+            }, 500);
+        }
+
+        function tenthAction() {
+            let tenthR = document.getElementById("tenthR");
+            let iLoveYou = document.getElementById("iLoveYou");
+            
+            iLoveYou.style.display = "block";
+            tenthR.style.display = "block";
+        }
+
+    </script>
+
+
+</body>
+</html>
